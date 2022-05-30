@@ -1,0 +1,150 @@
+@charset "UTF-8";
+@import url("http://fonts.cdnfonts.com/css/sofia-pro");
+html, body {
+  height: 100%;
+}
+
+body {
+  background: white;
+  color: black;
+  font-family: '맑은 고딕', '돋움', Dotum, '굴림', Gulim, Sans-serif;
+  font-size: 16px;
+}
+
+html, body, ul, li, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-style: normal;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap {
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#header {
+  height: 97px;
+  border-bottom: 1px solid #d5d6dd;
+}
+
+#header .wrap {
+  position: relative;
+}
+
+#header .wrap .logo {
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 124px;
+  height: 100%;
+}
+
+#header .wrap .logo a {
+  display: block;
+  width: 124px;
+  height: 64px;
+  background: url("../img/logo_header.png");
+}
+
+#header .wrap .gnb-wrap {
+  display: block;
+  width: 990px;
+  height: 100%;
+  margin: 0 280px 0 130px;
+}
+
+#header .wrap .gnb-wrap ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header .wrap .gnb-wrap ul li {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: -1px;
+  padding: 40px;
+  cursor: pointer;
+}
+
+#header .wrap .gnb-hover {
+  display: none;
+}
+
+#header .wrap .util-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+#header .wrap .util-wrap > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#header .wrap .util-wrap > ul > li {
+  position: relative;
+  font-size: 13px;
+  color: #444;
+  padding: 0 30px 0 10px;
+}
+
+#header .wrap .util-wrap > ul > li .lst {
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  z-index: 10;
+}
+
+#header .wrap .util-wrap > ul > li .lst ul {
+  padding: 6px 0;
+  border: 1px solid #d5d6dd;
+  border-radius: 3px;
+}
+
+#header .wrap .util-wrap > ul > li .lst ul li {
+  padding: 4px 15px;
+  background-color: white;
+}
+
+#header .wrap .util-wrap > ul > li .lst:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 100%;
+  right: 15px;
+  height: 0;
+  border: 11px solid transparent;
+  border-top: 0;
+  border-bottom-color: #b6babe;
+}
+
+#header .wrap .util-wrap > ul > li .lst:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 100%;
+  right: 16px;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 0;
+  border-bottom-color: #fff;
+}
