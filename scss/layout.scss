@@ -1,0 +1,69 @@
+main {
+  .youtube-content {
+    display: none;
+  }
+  .content-area.first {
+    width: 100%;
+    height: 66px;
+    padding: 20px 0 40px;
+    .search-bar {
+      position: relative;
+      margin: 0 auto;
+      max-width: 837px;
+      height: 66px;
+      border: 2px solid $searchBarColor;
+      border-radius: 20px 0 20px 0;
+      input {
+        float: left;
+        padding: 0 30px;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background-color: transparent;
+        outline: none;
+        caret-color: $searchBarColor;
+        box-sizing: border-box;
+        font-size: 28px;
+        color: $searchBarColor;
+      }
+      button {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        top: -2px;
+        right: -1px;
+        width: 126px;
+        height: 66px;
+        border-radius: 20px 0;
+        background-image: url('../img/btn_srch.png');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-color: $searchBarColor;
+        border: 2px solid $searchBarColor;
+        box-sizing: content-box;
+      }
+    }
+  }
+  .content-area.second {
+    .wrap {
+      @include gridItem;
+      height: 391px;
+      .col1 {
+        .slide {
+          a {
+            display: grid;
+            .ad-text {
+              grid-column: 1/2;
+            }
+            .ad-img {
+              grid-column: 2/4;
+            }
+          }
+        }
+      }
+      .col2 {
+        grid-column: 4/5;
+      }
+    }
+  }
+}

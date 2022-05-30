@@ -52,7 +52,19 @@
           position: relative;
           font-size: 13px;
           color: #444;
-          padding: 0 30px 0 10px;
+          &:nth-child(1), &:nth-child(2) {
+            padding: 0 30px 0 10px;
+          }
+          &:nth-child(1):after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: calc( 50% - 5px );
+            right: 0;
+            width: 1px;
+            height: 10px;
+            background-color: $borderPrimaryColor;
+          }
           .lst {
             position: absolute;
             top: 30px;
@@ -65,14 +77,22 @@
               li {
                 padding: 4px 15px;
                 background-color: white;
+                &:hover {
+                  background-color: $aHoverColor;
+                }
+                a {
+                  display: block;
+                  width: 100%;
+                  color: #444;
+                }
               }
             }
             &:before {
               content: '';
               display: inline-block;
               position: absolute;
-              bottom: 100%;
-              right: 15px;
+              top: -11px;
+              right: 16px;
               height: 0;
               border: 11px solid transparent;
               border-top: 0;
@@ -82,12 +102,33 @@
               content: '';
               display: inline-block;
               position: absolute;
-              bottom: 100%;
+              top: -10px;
               right: 16px;
               height: 0;
-              border: 10px solid transparent;
+              border: 11px solid transparent;
               border-top: 0;
               border-bottom-color: #fff;
+            }
+          }
+          .search-btn {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+            background: url('../img/img_srch.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+          }
+          a {
+            display: block;
+            padding-top: 4px;
+            .menu {
+              width: 28px;
+              height: 24px;
+              margin-left: 30px;
+              background: url('../img/img_sitemap.png');
+              background-size: contain;
+              background-repeat: no-repeat;
             }
           }
         }
