@@ -55,6 +55,20 @@
           &:nth-child(1), &:nth-child(2) {
             padding: 0 30px 0 10px;
           }
+          &:nth-child(1):before, &:nth-child(2):before {
+            margin: 13.5px 3.5px;
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 7px;
+            right: 13px;
+            margin: auto;
+            border: 4px solid transparent;
+            border-top-width: 5px;
+            border-bottom: 0;
+            border-top-color: #333;
+            transition: all .3s;
+          }
           &:nth-child(1):after {
             content: '';
             position: absolute;
@@ -64,51 +78,6 @@
             width: 1px;
             height: 10px;
             background-color: $borderPrimaryColor;
-          }
-          .lst {
-            position: absolute;
-            top: 30px;
-            right: -10px;
-            z-index: 10;
-            ul {
-              padding: 6px 0;
-              border: 1px solid $borderPrimaryColor;
-              border-radius: 3px;
-              li {
-                padding: 4px 15px;
-                background-color: white;
-                &:hover {
-                  background-color: $aHoverColor;
-                }
-                a {
-                  display: block;
-                  width: 100%;
-                  color: #444;
-                }
-              }
-            }
-            &:before {
-              content: '';
-              display: inline-block;
-              position: absolute;
-              top: -11px;
-              right: 16px;
-              height: 0;
-              border: 11px solid transparent;
-              border-top: 0;
-              border-bottom-color: #b6babe;
-            }
-            &:after {
-              content: '';
-              display: inline-block;
-              position: absolute;
-              top: -10px;
-              right: 16px;
-              height: 0;
-              border: 11px solid transparent;
-              border-top: 0;
-              border-bottom-color: #fff;
-            }
           }
           .search-btn {
             width: 24px;
