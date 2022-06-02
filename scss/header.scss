@@ -48,6 +48,33 @@
           width: 25%;
           padding: 13px 30px;
           box-sizing: border-box;
+          &:nth-child(4) li {
+            @for $i from 1 through 10 {
+              &:nth-child(#{$i}) a {
+                padding-left: 50px;
+                &:before {
+                  content: '';
+                  display: inline-block;
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  width: 40px;
+                  height: 30px;
+                  margin: -15px 0 0;
+                  background: url('../img/sp_gnb_part.png');
+                  background-position: 0 (-30px*($i - 1));
+                }
+                &:after {
+                  display: none;
+                }
+              }
+            }
+            a:before {
+            }
+            a:after {
+              display: none;
+            }
+          }
           li {
             padding: 8px 0 8px 8px;
             border-bottom: 1px solid #f2f2f2;
@@ -147,6 +174,9 @@
           cursor: pointer;
           &:nth-child(1), &:nth-child(2) {
             padding: 0 30px 0 10px;
+          }
+          &.active:nth-child(1):before, &.active:nth-child(2):before {
+            transform: rotate(180deg);
           }
           &:nth-child(1):before, &:nth-child(2):before {
             margin: 13.5px 3.5px;

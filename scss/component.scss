@@ -13,6 +13,7 @@
   background-position: 0 0;
   background-repeat: no-repeat;
   float: left;
+  cursor: pointer;
 }
 
 .btn-count {
@@ -40,6 +41,7 @@
   background-position: -56px 0;
   background-repeat: no-repeat;
   float: left;
+  cursor: pointer;
 }
 
 .btn-stop {
@@ -47,6 +49,7 @@
   width: 40px;
   height: 50px;
   float: right;
+  cursor: pointer;
   span {
     display: block;
     width: 8px;
@@ -55,6 +58,11 @@
     background: url('../img/sp_main.png');
     background-position: -124px -35px;
     background-repeat: no-repeat;
+  }
+  &.active {
+    span {
+      background-position: -112px -35px;
+    }
   }
 }
 
