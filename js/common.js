@@ -127,21 +127,44 @@ $(function(){
   });
 
   // content sixth slide
-  const widthNum = $('.swiper.six .swiper-wrapper.six .swiper-slide').outerWidth();
+  const widthNum = $('.swiper.six .swiper-wrapper.six .swiper-slide:last-child').outerWidth(true);
   let swiperLeng = $('.swiper.six .swiper-wrapper.six .swiper-slide').length;
+  let swiperWrapper = $('.swiper.six .swiper-wrapper.six');
 
   $('.swiper-wrapper.six').width(widthNum*swiperLeng);
 
-  // 슬라이드 포지션 초기화
-  // initialFunc('prev');
+  function initialFunc2(init) {
+    swiperWrapper.css('margin-left', `-${widthNum*2}px`);
+    if ( init == '.btn-prev.six' ) {
+      $('.swiper-wrapper.six .swiper-slide:last-child').prependTo('.swiper-wrapper.six');
+      $('.swiper-wrapper.six .swiper-slide:last-child').prependTo('.swiper-wrapper.six');
+    } else if ( init == '.btn-next.six' ) {
+      $('.swiper-wrapper.six .swiper-slide:first-child').appendTo('.swiper-wrapper.six');
+      $('.swiper-wrapper.six .swiper-slide:first-child').appendTo('.swiper-wrapper.six');
+    }
+  }
 
-  // 슬라이드 포지션 초기화 함수
-  // function initialFunc(init) {
-  //   $('#carousel-inner').css('margin-left', -widthNum);
-  //   if ( init === 'prev' ) {
-  //     $('#carousel-inner ul.column:last').prependTo('#carousel-inner');
-  //   } else if ( init === 'next' ) {
-  //     $('#carousel-inner ul.column:first').appendTo('#carousel-inner');
-  //   }
-  // }
+  initialFunc2('.btn-prev.six');
+
+  function actionBtn2(elem){
+    elem.click(function(){
+      let swiperMarginLeft = parseInt(swiperWrapper.css('margin-left'));
+      let isAni = swiperWrapper.is(':animated');
+      if ( !isAni ) {
+        if( elem.attr('id') == 'six-prev' ) {
+          swiperWrapper.animate({ marginLeft: swiperMarginLeft + widthNum*2 }, 'slow', 'swing', function(){
+            initialFunc2('.btn-prev.six');
+          });
+        } else if ( elem.attr('id') == 'six-next' ) {
+          swiperWrapper.animate({ marginLeft: swiperMarginLeft - widthNum*2 }, 'slow', 'swing', function(){
+            initialFunc2('.btn-next.six');
+          });
+        };
+      };
+    });
+  }
+
+  $('.btn').each(function(){
+    actionBtn2($(this));
+  });
 });

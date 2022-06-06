@@ -717,8 +717,12 @@ main {
             height: 243px;
             .swiper-slide {
               float: left;
-              width: 19.45vw;
+              width: 18.07vw;
               height: 243px;
+              margin-left: 1.87vw;
+              &:nth-child(1) {
+                margin-left: 0;
+              }
               @for $i from 1 through 17 {
                 &:nth-child(#{$i}) {
                   background: url('../img/content6/alarm#{$i}.jpg');
@@ -732,6 +736,32 @@ main {
           position: absolute;
           top: 0;
           right: 0;
+          width: 149px;
+          & #six-prev {
+            width: 31px;
+            height: 31px;
+            background-position: -112px 0;
+          }
+          & #six-next {
+            width: 31px;
+            height: 31px;
+            background-position: -217px 0;
+          }
+          & .btn-count.six {
+            width: 52px;
+            height: 31px;
+          }
+          & .btn-stop.six {
+            width: 33px;
+            height: 31px;
+            float: left;
+            span {
+              width: 31px;
+              height: 31px;
+              margin: 0;
+              background-position: -182px 0;
+            }
+          }
         }
       }
     }
