@@ -900,6 +900,7 @@ main {
             border-left: 0;
             box-sizing: border-box;
             transition: .3s;
+            cursor: pointer;
             &.active {
               border-bottom: 53px solid #17b464;
               h2 {
@@ -996,6 +997,7 @@ main {
   .content-area.eighth {
     border-top: 1px solid $borderPrimaryColor;
     margin-top: 60px;
+
     .wrap {
       padding: 20px 0 20px 180px;
       box-sizing: border-box;
@@ -1071,11 +1073,12 @@ main {
             box-sizing: border-box;
             background: white;
             transition: .7s;
-            z-index: -1;
+            visibility: hidden;
             &.active {
               height: 300px;
               top: -300px;
               z-index: 1;
+              visibility: visible;
             }
             ul {
               padding: 6px 0;

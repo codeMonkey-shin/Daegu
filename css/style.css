@@ -1422,8 +1422,13 @@ main .content-area.sixth .wrap .col2 .swiper .swiper-wrapper {
 
 main .content-area.sixth .wrap .col2 .swiper .swiper-wrapper .swiper-slide {
   float: left;
-  width: 19.45vw;
+  width: 18.07vw;
   height: 243px;
+  margin-left: 1.87vw;
+}
+
+main .content-area.sixth .wrap .col2 .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
+  margin-left: 0;
 }
 
 main .content-area.sixth .wrap .col2 .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
@@ -1515,6 +1520,37 @@ main .content-area.sixth .wrap .col2 .btn-group {
   position: absolute;
   top: 0;
   right: 0;
+  width: 149px;
+}
+
+main .content-area.sixth .wrap .col2 .btn-group #six-prev {
+  width: 31px;
+  height: 31px;
+  background-position: -112px 0;
+}
+
+main .content-area.sixth .wrap .col2 .btn-group #six-next {
+  width: 31px;
+  height: 31px;
+  background-position: -217px 0;
+}
+
+main .content-area.sixth .wrap .col2 .btn-group .btn-count.six {
+  width: 52px;
+  height: 31px;
+}
+
+main .content-area.sixth .wrap .col2 .btn-group .btn-stop.six {
+  width: 33px;
+  height: 31px;
+  float: left;
+}
+
+main .content-area.sixth .wrap .col2 .btn-group .btn-stop.six span {
+  width: 31px;
+  height: 31px;
+  margin: 0;
+  background-position: -182px 0;
 }
 
 main .content-area.seventh {
@@ -1764,6 +1800,7 @@ main .content-area.seventh .wrap .col2 > ul li {
   border-left: 0;
   box-sizing: border-box;
   transition: .3s;
+  cursor: pointer;
 }
 
 main .content-area.seventh .wrap .col2 > ul li.active {
@@ -1958,13 +1995,14 @@ main .content-area.nineth .wrap > ul > li .drag-box {
   box-sizing: border-box;
   background: white;
   transition: .7s;
-  z-index: -1;
+  visibility: hidden;
 }
 
 main .content-area.nineth .wrap > ul > li .drag-box.active {
   height: 300px;
   top: -300px;
   z-index: 1;
+  visibility: visible;
 }
 
 main .content-area.nineth .wrap > ul > li .drag-box ul {
