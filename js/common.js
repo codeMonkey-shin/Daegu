@@ -167,4 +167,28 @@ $(function(){
   $('.btn').each(function(){
     actionBtn2($(this));
   });
+
+  // content seventh
+  $('.content-area.seventh .col2 > ul > li').click(function(){
+    $('.content-area.seventh .col2 > ul > li').removeClass('active');
+    $(this).toggleClass('active');
+    if ( $(this).find('h2').text() == '자주찾는 메뉴' ) {
+      $('.content-area.seventh .col2 .menu, .content-area.seventh .col2 .people, .content-area.seventh .col2 .buisness, .content-area.seventh .col2 .tour').css('display', 'none');
+      $('.content-area.seventh .col2 .menu').css('display', 'block');
+    } else if ( $(this).find('h2').text() == '시민' ) {
+      $('.content-area.seventh .col2 .menu, .content-area.seventh .col2 .people, .content-area.seventh .col2 .buisness, .content-area.seventh .col2 .tour').css('display', 'none');
+      $('.content-area.seventh .col2 .people').css('display', 'block');
+    } else if ( $(this).find('h2').text() == '사업자' ) {
+      $('.content-area.seventh .col2 .menu, .content-area.seventh .col2 .people, .content-area.seventh .col2 .buisness, .content-area.seventh .col2 .tour').css('display', 'none');
+      $('.content-area.seventh .col2 .buisness').css('display', 'block');
+    } else if ( $(this).find('h2').text() == '관광객' ) {
+      $('.content-area.seventh .col2 .menu, .content-area.seventh .col2 .people, .content-area.seventh .col2 .buisness, .content-area.seventh .col2 .tour').css('display', 'none');
+      $('.content-area.seventh .col2 .tour').css('display', 'block');
+    }
+  });
+
+  // content nineth
+  $('.content-area.nineth ul li').click(function(){
+    $('.drag-box', this).toggleClass('active');
+  });
 });
