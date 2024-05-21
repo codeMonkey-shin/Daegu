@@ -1,6 +1,9 @@
 # Nginx 이미지를 기반으로
 FROM nginx:alpine
 
+# 커스텀 Nginx 설정 파일 복사
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # 작업 디렉토리 설정
 WORKDIR /usr/share/nginx/html
 
